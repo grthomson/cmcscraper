@@ -33,8 +33,12 @@ for i in soup.find_all("a"):
        print(i.text); arrtext.append(i.text)
 
 for volbyexch in soup.find_all("span", class_="volume"):
-    volume = int(((volbyexch.text).strip('$')).replace(',',''));  
-    arrvols.append(volume)
+    volumestring = (volbyexch.text.replace(',',''));  
+    volumestring2 = volumestring.replace('$','');
+    arrvols.append(volumestring2)
+
+# There must be a nicer way to do this than two separate replace options. "Strip" is unreliable. Perhaps better to remove '$' from the soup in one pass rather than within a loop.
+
 
 print(*arrtext, sep="\n")
 
@@ -47,7 +51,7 @@ print('')
 print(len(arrtext))
 print(len(arrvols))
 
-# create a 2-D array combining volume with pairs
+# create a 2-D array combining volume with pairs (to make the chart)
 
 arrcombine = []
 
@@ -62,6 +66,10 @@ for k in arrvols:
   arrcombine.append([k, pairs[j]]); j=j+1
 
 print(*arrcombine, sep="\n")
+
+# print statement just to check the array looks right.
+
+# right now the displayed pairs are hardcoded in. better would be to use the top 10 by volume, say. this would also increase modularity.
 
 ethkrw = 0
 
@@ -112,6 +120,8 @@ for p in arrcombine:
        ethcad = ethcad + p[0]
    elif p[1] == 'OMG/ETH':
        etherc = etherc + p[0]
+
+#case statement would be quicker, again parametrizing by the highest volume pairs would increase modularity. same goes for the charts.
 
 
 #fig1, ax1 = plt.subplots()
