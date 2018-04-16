@@ -7,3 +7,7 @@ Pulls 24H pair trading volume data from coinmarketcap.com for cryptocurrencies, 
 Currently hard-coded for certain currency pairs, this could easily be modified to work for arbitrary high-volume pairs. 
 
 Note that this is an exercise in scraping - the same results could be achieved more simply using the .json API
+
+![Sample visualization](https://github.com/grthomson/cmcscraper/blob/master/piechart.png)
+
+
