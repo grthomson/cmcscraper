@@ -8,6 +8,6 @@ Currently hard-coded for certain currency pairs, this could easily be modified t
 
 Note that this is an exercise in scraping - the same results could be achieved more simply using the .json API
 
-![Sample visualization](https://github.com/grthomson/cmcscraper/blob/master/piechart.png)
+![Sample visualization](https://github.com/grthomson/cmcscraper/blob/master/figure_1.png)
 
 
