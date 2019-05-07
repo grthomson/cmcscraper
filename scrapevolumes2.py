@@ -57,8 +57,12 @@ arrcombine = []
 
 #j is dummy variable for pulling out every second entry in arrtext (the pairs)
 
-pairs = arrtext[1::2]
-print(*pairs)
+# NOTE some redundancy has now crept in! pairs / arrtext can be same
+
+pairs = arrtext
+print(*pairs, sep="\n")
+
+print(len(pairs))
 
 j=0
 
