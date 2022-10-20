@@ -1,6 +1,6 @@
-# Potentially broken by CMC updates?
-
 # cmcscraper
+
+# Potentially broken by CMC updates!
 
 beautifulsoup based scraper
 
